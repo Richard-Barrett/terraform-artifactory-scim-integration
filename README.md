@@ -1,6 +1,6 @@
 <img align="right" width="60" height="60" src="images/terraform.png">
 
-# Terraform Configuration for JFrog Platform Resources
+# Terraform Module for JFrog Artifactory Platform SAML+SCIM Settings
 
 [![CodeQL IaC](https://github.com/Richard-Barrett/terraform-artifactory-scim-integration/actions/workflows/iac-codeql.yaml/badge.svg)](https://github.com/Richard-Barrett/terraform-artifactory-scim-integration/actions/workflows/iac-codeql.yaml)
 [![Terraform Validate](https://github.com/Richard-Barrett/terraform-artifactory-scim-integration/actions/workflows/terraform_validate.yaml/badge.svg)](https://github.com/Richard-Barrett/terraform-artifactory-scim-integration/actions/workflows/terraform_validate.yaml)
@@ -137,7 +137,7 @@ To create only the SAML settings, the module might look like this:
 
 ```hcl
 module "jfrog_platform" {
-  source = "git::https://github.com/Richard-Barrett/terraform-artifactory-scim-integration.git?ref=0.1.0"
+  source = "git::https://github.com/Richard-Barrett/terraform-artifactory-scim-integration.git?ref=0.2.0"
 
   # Enable only SAML settings
   create_saml_settings = true
@@ -204,7 +204,7 @@ provider "platform" {
 }
 
 module "jfrog_platform" {
-  source = "git::https://github.com/Richard-Barrett/terraform-artifactory-scim-integration.git?ref=0.1.0"
+  source = "git::https://github.com/Richard-Barrett/terraform-artifactory-scim-integration.git?ref=0.2.0"
 }
 ```
 
@@ -218,13 +218,13 @@ You can also specify data resources and read in the `certificate` via AWS Secret
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.5.6 |
-| <a name="requirement_platform"></a> [platform](#requirement\_platform) | 1.7.4 |
+| <a name="requirement_platform"></a> [platform](#requirement\_platform) | 1.15.1 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_platform"></a> [platform](#provider\_platform) | 1.7.4 |
+| <a name="provider_platform"></a> [platform](#provider\_platform) | 1.15.1 |
 
 ## Modules
 
@@ -234,9 +234,9 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [platform_saml_settings.this](https://registry.terraform.io/providers/jfrog/platform/1.7.4/docs/resources/saml_settings) | resource |
-| [platform_scim_group.this](https://registry.terraform.io/providers/jfrog/platform/1.7.4/docs/resources/scim_group) | resource |
-| [platform_scim_user.this](https://registry.terraform.io/providers/jfrog/platform/1.7.4/docs/resources/scim_user) | resource |
+| [platform_saml_settings.this](https://registry.terraform.io/providers/jfrog/platform/1.15.1/docs/resources/saml_settings) | resource |
+| [platform_scim_group.this](https://registry.terraform.io/providers/jfrog/platform/1.15.1/docs/resources/scim_group) | resource |
+| [platform_scim_user.this](https://registry.terraform.io/providers/jfrog/platform/1.15.1/docs/resources/scim_user) | resource |
 
 ## Inputs
 
