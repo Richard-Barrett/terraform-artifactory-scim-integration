@@ -5,15 +5,15 @@ output "saml_settings_name" {
 
 output "saml_login_url" {
   description = "The login URL for SAML"
-  value       = platform_saml_settings.this.login_url
+  value       = platform_saml_settings.this[0].login_url
 }
 
 output "saml_logout_url" {
   description = "The logout URL for SAML"
-  value       = platform_saml_settings.this.logout_url
+  value       = platform_saml_settings.this[0].logout_url
 }
 
 output "saml_provider_name" {
   description = "The service provider name for SAML"
-  value       = platform_saml_settings.this.service_provider_name
+  value       = platform_saml_settings.this[0].service_provider_name
 }

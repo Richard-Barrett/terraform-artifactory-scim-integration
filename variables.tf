@@ -112,8 +112,12 @@ variable "scim_group_id" {
 }
 
 variable "scim_group_members" {
-  type        = list(string)
-  description = "Members of SCIM group"
+  type = list(object({
+    value   = string
+    type    = string
+    display = string
+  }))
+  description = "List of members for SCIM group, each with 'value', 'type', and 'display' fields."
   default     = []
 }
 
@@ -124,10 +128,14 @@ variable "scim_user_active" {
 }
 
 variable "scim_user_emails" {
-  type        = list(string)
-  description = "Emails for SCIM user"
-  sensitive   = true
+  type = list(object({
+    value   = string
+    type    = string
+    primary = bool
+  }))
+  description = "List of email objects for SCIM user, each with 'value', 'type', and 'primary' fields."
   default     = []
+  sensitive   = true
 }
 
 variable "scim_user_username" {
