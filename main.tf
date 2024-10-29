@@ -2,8 +2,8 @@ terraform {
   required_version = ">= 1.5.6"
   required_providers {
     platform = {
-      source  = "jfrog/platform"
-      version = "1.7.4"
+      source = "jfrog/platform"
+      version = "1.15.1"
     }
   }
 }
