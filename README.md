@@ -262,9 +262,9 @@ No modules.
 | <a name="input_saml_verify_audience_restriction"></a> [saml\_verify\_audience\_restriction](#input\_saml\_verify\_audience\_restriction) | Verify audience restriction for SAML | `bool` | `true` | no |
 | <a name="input_scim_group_display_name"></a> [scim\_group\_display\_name](#input\_scim\_group\_display\_name) | Display name for SCIM group | `string` | `null` | no |
 | <a name="input_scim_group_id"></a> [scim\_group\_id](#input\_scim\_group\_id) | ID for SCIM group | `string` | `null` | no |
-| <a name="input_scim_group_members"></a> [scim\_group\_members](#input\_scim\_group\_members) | Members of SCIM group | `list(string)` | `[]` | no |
+| <a name="input_scim_group_members"></a> [scim\_group\_members](#input\_scim\_group\_members) | List of members for SCIM group, each with 'value', 'type', and 'display' fields. | <pre>list(object({<br>    value   = string<br>    type    = string<br>    display = string<br>  }))</pre> | `[]` | no |
 | <a name="input_scim_user_active"></a> [scim\_user\_active](#input\_scim\_user\_active) | Active status for SCIM user | `bool` | `false` | no |
-| <a name="input_scim_user_emails"></a> [scim\_user\_emails](#input\_scim\_user\_emails) | Emails for SCIM user | `list(string)` | `[]` | no |
+| <a name="input_scim_user_emails"></a> [scim\_user\_emails](#input\_scim\_user\_emails) | List of email objects for SCIM user, each with 'value', 'type', and 'primary' fields. | <pre>list(object({<br>    value   = string<br>    type    = string<br>    primary = bool<br>  }))</pre> | `[]` | no |
 | <a name="input_scim_user_username"></a> [scim\_user\_username](#input\_scim\_user\_username) | Username for SCIM user | `string` | `null` | no |
 
 ## Outputs
