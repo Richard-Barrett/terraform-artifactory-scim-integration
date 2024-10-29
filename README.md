@@ -137,7 +137,7 @@ To create only the SAML settings, the module might look like this:
 
 ```hcl
 module "jfrog_platform" {
-  source = "git::https://github.com/Richard-Barrett/terraform-artifactory-scim-integration.git?ref=0.2.0"
+  source = "git::https://github.com/Richard-Barrett/terraform-artifactory-scim-integration.git?ref=0.6.0"
 
   # Enable only SAML settings
   create_saml_settings = true
@@ -204,7 +204,7 @@ provider "platform" {
 }
 
 module "jfrog_platform" {
-  source = "git::https://github.com/Richard-Barrett/terraform-artifactory-scim-integration.git?ref=0.2.0"
+  source = "git::https://github.com/Richard-Barrett/terraform-artifactory-scim-integration.git?ref=0.6.0"
 }
 ```
 
