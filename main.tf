@@ -3,7 +3,7 @@ terraform {
   required_providers {
     platform = {
       source  = "jfrog/platform"
-      version = "1.15.1"
+      version = "2.2.0"
     }
   }
 }
